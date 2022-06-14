@@ -22,7 +22,7 @@ module.exports.executeQuery = async (sqlStatment) => {
     console.log(`dB SQL Errror ${err}`);
   }finally{
   
-    if(connection){
+    if(connection && false){
         try{
             await connection.close();
   
