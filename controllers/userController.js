@@ -12,13 +12,15 @@ class userController {
 
   static test = async (req, res) => {
 
-    const result = await executeQuery("select GET_SECURITY_MATRIX ('MYOUSRI')from dual")
-    //  console.log(result.rows[0][0].substring(1, result.rows[0][0].length - 1))
-    // console.log(result.rows[0][0])
+    // const result = await executeQuery("select GET_SECURITY_MATRIX ('MYOUSRI')from dual")
+    // //  console.log(result.rows[0][0].substring(1, result.rows[0][0].length - 1))
+    // // console.log(result.rows[0][0])
 
-    let jsonData = result.rows ? JSON.parse(result.rows[0][0]) : null
-    res.status(200).send({apiStatus:true, data:jsonData, message:"success"})
-    console.log(jsonData);
+    // let jsonData = result.rows ? JSON.parse(result.rows[0][0]) : null
+    // res.status(200).send({apiStatus:true, data:jsonData, message:"success"})
+    // console.log(jsonData);
+
+    res.send("working");
   }
 
 
